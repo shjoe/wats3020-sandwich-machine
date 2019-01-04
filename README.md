@@ -6,7 +6,7 @@ between types. You will be using a variety of techniques to take a sandwich
 order and produce a receipt for that order.
 
 In order to complete this assignment, it will be useful to read the section on
-[Data Types and Structures](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/data-types/)
+[Data Types and Structures](https://suwebdev.github.io/WATS-3020-gitbook/data-types/)
 from _A Practical Introduction to JavaScript_.
 
 You may find these additional resources helpful for completing this project:
