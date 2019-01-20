@@ -9,19 +9,19 @@
 //
 // Bread prompt
 
-let bread = prompt("What kind of bread do you want? (white, wheat, sour)","white");
+let bread = prompt("What kind of bread would you like? (white, wheat, sour)","thousand grain");
 
 // Meat/s prompt
 
-let meats = prompt("What kind of meat(s) do you want? You may select more than one by separating with comma, for example: chicken, bacon, beef","chicken");
+let meats = prompt("What kind of meat(s) would you like? You may select more than one by separating with comma, for example: chicken, bacon, beef","turkey");
 
 // Topping/s prompt
 
-let toppings = prompt("Enter comma separated list of toppings (such as tomato, lettuce, onions):","lettuce, tomato, avocado");
+let toppings = prompt("Enter comma separated list of toppings (such as tomato, lettuce, onions):","cheese, tomato, avocado");
 
 // Condiment/s prompt
 
-let condiments = prompt("Enter comma separated list of condiments (such as mayo, ketchup, mustard):", "mayo");
+let condiments = prompt("Enter comma separated list of condiments (such as mayo, ketchup, mustard):", "mayo, mustard");
 
 // Step Two ////////////////////////////////////////////////////////////
 //
@@ -59,6 +59,10 @@ let orderTax = subtotal * waStateTaxRate;
 // Grand total (subtotal + tax)
 let totalPrice = subtotal + orderTax;
 
+// Optional tip (grand total * tip percentage)
+let tenPercentTip = totalPrice * .1;
+let fifteenPercentTip = totalPrice * .15;
+let twentyPercentTip = totalPrice * .2; 
 
 // Step Three //////////////////////////////////////////////////////////
 //
@@ -70,7 +74,7 @@ let receiptTemplate = `
     <p>Meat: ${meats}</p>
     <p>Toppings: ${toppings}</p>
     <p>Condiments: ${condiments}</p>
-    <p>---------------------</p>
+    <p class="center">---------------------</p>
     <p class="text-right">Sandwich: $${prices.sandwich.toFixed(2)}</p>
     <p class="text-right">Meat: $${meatCost.toFixed(2)}</p>
     <p class="text-right">Toppings: $${toppingCost.toFixed(2)}</p>
@@ -80,6 +84,11 @@ let receiptTemplate = `
     <p class="text-right">Tax: $${orderTax.toFixed(2)}</p>
     <p class="text-right">--------</p>
     <p class="text-right">Total: $${totalPrice.toFixed(2)}</p>
+    <p class="center">---------------------</p>
+    <p class="center">Suggested Tips <br>
+    10%: $${tenPercentTip.toFixed(2)}<br>
+    15%: $${fifteenPercentTip.toFixed(2)}<br>
+    20%: $${twentyPercentTip.toFixed(2)}</p>
 `
 
 ///////////////////////////////////////////////////////////////////////
